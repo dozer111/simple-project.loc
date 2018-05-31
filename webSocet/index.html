@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/webSocet.css">
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+    <script src="../js/jquery.3.3.1.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<h1>Часть 1. Пока что данные посылаем на внешний ресурс, своей серверной логики нету</h1>
+<h1 id="main_title">
+    Simple webSocet chat
+</h1>
+<input type="text" id="message" placeholder="message" ><br>
+<input type="text" id="username" placeholder="guest"><br>
+<input type="button" id="say" value="Say">
+<input type="button" id="sayJson" value="SayJson">
+<input type="button" id="exit" value="Exit"><br>
+<label id="status">Connection status</label><br>
+<div class="text text-purple">
+    <h3>Вывод сообщений без Json</h3>
+    <p id="textarea"></p>
+</div>
+<div class="text text-maroon">
+    <h3>Вывод сообщений с Json</h3>
+    <p id="textarea2"></p>
+</div>
+
+</body>
+</html>
