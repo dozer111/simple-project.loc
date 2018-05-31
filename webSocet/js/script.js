@@ -7,7 +7,8 @@ $(function () {
     var status=$('#status');
 
     // 1 соединяемся с сервером
-    var socket=new WebSocket("ws://echo.websocket.org");
+    //var socket=new WebSocket("ws://echo.websocket.org");
+    var socket=new WebSocket("ws://localhost:8080");
         // 1a проверяем установку соединения с сервером
     socket.onopen=function () {
         console.log('Connection with server success!');
