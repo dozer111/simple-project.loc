@@ -1,0 +1,3 @@
+<?php
+
+class require2{}
