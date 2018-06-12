@@ -51,16 +51,17 @@ pcntl_signal(SIGTERM,'sigHandler');
 pcntl_signal(SIGUSR1,'sigHandler');
 pcntl_signal(SIGUSR2,'sigHandler');
 
-
+cli_set_process_title('My own daemon');
 
 $pid=pcntl_fork();
-
+$pid1=011;
 if($pid==-1)
 {
     exit('Error. Process'.$pid.' wasn`t forked!');
 }
 elseif($pid)
 {
+    $pid1=$pid;
     exit('Kill parent process');
 }
 else {
@@ -68,6 +69,7 @@ else {
 
     posix_setsid();
     $posix_id=posix_getsid(0);
+    $posix_getpid=posix_getpid();
     $fileName='/var/www/simple-project.loc/files/test3.txt';
     $counter=0;
     while($status)
@@ -78,7 +80,7 @@ else {
         # pcntl_fork        ==> PID
         # posix_getsid      ==> posix_getsid
 
-        $b='PID = '.$pid. ', posix_getsid ==> '.$posix_id.' counter ==> '.$counter."\n";
+        $b='PID = '.$pid1. ', posix_getsid ==> '.$posix_id.' posix_getpid ==> '.$posix_getpid.' counter ==> '.$counter."\n";
         file_put_contents($fileName,$a.$b);
         sleep(5);
         $counter++;
