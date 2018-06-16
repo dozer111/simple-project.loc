@@ -5,6 +5,8 @@
     }
   },
   "require": {
-    "cboden/ratchet": "^0.4"
+    "cboden/ratchet": "^0.4",
+    "symfony/dom-crawler": "^4.1",
+    "symfony/css-selector": "^4.1"
   }
 }

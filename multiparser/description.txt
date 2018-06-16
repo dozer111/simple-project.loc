@@ -1,0 +1,2 @@
+многопоточный парсер
+основа взята с https://www.youtube.com/watch?v=izLOoyRr260
